@@ -1,0 +1,38 @@
+---
+import main from "../data/main.json";
+import HeroVisual from "./HeroVisual.astro";
+
+const cta =
+  "inline-flex min-h-11 items-center justify-center rounded-full px-5 text-sm font-medium";
+---
+
+<section class="relative bg-paper">
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div class="hero-rays absolute inset-0"></div>
+  </div>
+  <div class="hero-scrim pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="relative z-10 px-5 pt-10 pb-12 text-center sm:px-6 sm:pt-12 sm:pb-6">
+    <p class="mx-auto inline-flex rounded-full border border-white/35 bg-white/10 px-3 py-1 text-sm text-white">
+      {main.kicker}
+    </p>
+    <h1 class="mx-auto mt-8 max-w-[18ch] font-display text-[2.15rem] leading-[1.22] font-semibold tracking-tight text-balance text-white sm:mt-6 sm:max-w-[16ch] sm:text-6xl sm:leading-[1.05]">
+      {main.headline}
+    </h1>
+    <p class="mx-auto mt-8 max-w-[34ch] text-base leading-relaxed text-rose-soft sm:mt-5 sm:max-w-[36ch] sm:text-lg">
+      {main.thanks.before}{" "}
+      <a href={main.thanks.href} target="_blank" rel="noopener noreferrer" class="font-medium text-white underline decoration-white/50 underline-offset-4">{main.thanks.name}</a>. {main.thanks.after}
+    </p>
+    <p class="mt-6 text-sm font-medium text-white sm:mt-4">{main.where}</p>
+    <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-6 sm:flex-row sm:gap-3">
+      <a href={main.primaryCta.href} target="_blank" rel="noopener noreferrer" class={`${cta} w-full bg-paper text-rose-deep hover:bg-rose-soft sm:w-auto`}>
+        {main.primaryCta.label}
+      </a>
+      <a href={main.secondaryCta.href} target="_blank" rel="noopener noreferrer" class={`${cta} w-full border border-white bg-transparent text-white hover:bg-white/10 sm:w-auto`}>
+        {main.secondaryCta.label}
+      </a>
+    </div>
+    <div class="mt-12 sm:mt-8">
+      <HeroVisual />
+    </div>
+  </div>
+</section>

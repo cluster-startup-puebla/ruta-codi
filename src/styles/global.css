@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "@fontsource/archivo/latin-500.css";
+@import "@fontsource/archivo/latin-600.css";
+@import "@fontsource/archivo/latin-700.css";
+@import "@fontsource/raleway/latin-400.css";
+@import "@fontsource/raleway/latin-500.css";
+
+@theme {
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --color-rose: #e8186a;
+  --color-rose-deep: #a81c70;
+  --color-rose-press: #86145c;
+  --color-rose-soft: #fde8ef;
+  --color-rose-mist: #fff5f8;
+  --color-ink: #2a2a2c;
+  --color-mute: #5a5a5c;
+  --color-line: #e6e6e8;
+  --color-paper: #ffffff;
+  --color-mist: #f6f6f7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--color-rose-soft);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 3px;
+  }
+}
+
+.hero-rays {
+  background: repeating-conic-gradient(
+    from 12deg at 50% 34%,
+    #fff5f8 0deg 7deg,
+    #f7b6ce 7deg 13deg,
+    #e8186a 13deg 20deg,
+    #a81c70 20deg 28deg
+  );
+  filter: blur(22px);
+  transform: scale(1.2);
+}
+
+.hero-scrim {
+  background:
+    linear-gradient(to bottom, #86145c 0%, rgba(134, 20, 92, 0.92) 16%, rgba(232, 24, 106, 0.4) 36%, transparent 52%),
+    linear-gradient(to top, #ffffff 0%, #ffffff 22%, transparent 46%);
+}
+
+@keyframes settle {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-panel {
+    animation: settle 720ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

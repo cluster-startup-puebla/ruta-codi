@@ -1,0 +1,23 @@
+---
+interface Props {
+  cta: { label: string; href: string };
+}
+
+const { cta } = Astro.props;
+---
+
+<header class="sticky top-0 z-40 bg-rose-press/95 text-white">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+    <a href="#contenido" class="font-display text-lg font-semibold tracking-tight">
+      Ruta CoDi
+    </a>
+    <a
+      href={cta.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex min-h-11 items-center rounded-full bg-paper px-4 text-sm font-medium text-rose-deep hover:bg-rose-soft"
+    >
+      {cta.label}
+    </a>
+  </div>
+</header>

@@ -1,0 +1,30 @@
+---
+import follow from "../data/follow.json";
+
+const section = follow.month;
+---
+
+{
+  section.enabled && (
+    <section id={section.id} class="bg-mist px-4 py-16 sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">{section.title}</h2>
+        <p class="mt-4 max-w-[68ch] text-lg leading-relaxed text-mute">{section.note}</p>
+        <ol class="mt-10 border-l border-line pl-5">
+          {section.items.map((item) => (
+            <li class="relative pb-7 last:pb-0">
+              <span class="absolute top-1.5 -left-[1.45rem] size-2.5 rounded-full bg-rose" aria-hidden="true" />
+              <p class="font-display text-lg font-semibold">
+                {item.when}
+                <span class="font-medium"> · {item.title}</span>
+              </p>
+              {item.tentative && <p class="mt-1 text-sm font-medium text-rose-deep">Fecha tentativa</p>}
+              <p class="mt-1 max-w-[62ch] leading-relaxed">{item.text}</p>
+              <p class="mt-1 text-sm text-mute">{item.place}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )
+}

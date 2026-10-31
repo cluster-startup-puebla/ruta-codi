@@ -1,0 +1,54 @@
+---
+import main from "../data/main.json";
+
+const spots = [
+  "md:left-[5%] md:top-16",
+  "md:right-[4%] md:top-24",
+  "md:bottom-8 md:left-[8%]",
+  "md:right-[6%] md:bottom-6",
+];
+---
+
+<div class="relative mx-auto w-full max-w-5xl md:h-[36rem]">
+  <svg
+    class="pointer-events-none absolute inset-x-0 top-4 hidden h-[90%] w-full md:block"
+    viewBox="0 0 800 420"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path
+      d="M-30 300C120 360 210 40 400 150s250 210 450-20"
+      stroke="#E8186A"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+  </svg>
+  <div class="hero-panel relative z-10 mx-auto w-[210px] sm:w-[250px] md:absolute md:top-6 md:left-1/2 md:w-[260px] md:-translate-x-1/2">
+    <div class="rounded-[2rem] bg-ink p-[7px] shadow-[0_28px_40px_-18px_rgba(42,42,44,0.55)]">
+      <div class="overflow-hidden rounded-[1.45rem] bg-paper text-ink">
+        <div class="bg-rose px-4 pt-5 pb-4 text-white">
+          <p class="text-xs font-medium">Ruta CoDi</p>
+          <p class="mt-1 font-display text-lg leading-tight font-semibold">Sede Puebla</p>
+        </div>
+        <ol class="space-y-3 px-4 py-4 text-left">
+          {
+            main.beats.map((beat) => (
+              <li>
+                <p class="font-display text-sm font-semibold text-rose-deep">{beat.when}</p>
+                <p class="text-sm leading-snug">{beat.title}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </div>
+  {
+    main.floats.map((card, index) => (
+      <article class:list={["absolute z-20 hidden w-40 rounded-2xl bg-paper p-3 text-left shadow-[0_16px_28px_-18px_rgba(42,42,44,0.55)] md:block", spots[index]]}>
+        <p class="font-display text-sm font-semibold text-rose-deep">{card.kicker}</p>
+        <p class="mt-1 text-sm leading-snug font-medium">{card.title}</p>
+      </article>
+    ))
+  }
+</div>

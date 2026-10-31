@@ -1,0 +1,26 @@
+---
+import follow from "../data/follow.json";
+
+const section = follow.whyNow;
+---
+
+{
+  section.enabled && (
+    <section id={section.id} class="px-4 py-16 sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="max-w-[16ch] font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+          {section.title}
+        </h2>
+        <p class="mt-4 max-w-[65ch] text-lg leading-relaxed text-mute">{section.body}</p>
+        <ul class="mt-10 border-y border-line">
+          {section.items.map((item) => (
+            <li class="grid gap-2 border-t border-line py-5 first:border-t-0 sm:grid-cols-[9.5rem_1fr] sm:items-baseline sm:gap-8">
+              <p class="font-display text-xl font-semibold text-rose-deep">{item.figure}</p>
+              <p class="max-w-[62ch] leading-relaxed">{item.text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,20 @@
+---
+import follow from "../data/follow.json";
+
+const section = follow.cursor;
+---
+
+{
+  section.enabled && (
+    <section id={section.id} class="bg-rose px-4 py-16 text-white sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="max-w-[14ch] font-display text-3xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
+          {section.title}
+        </h2>
+        <p class="mt-5 max-w-[22ch] font-display text-2xl font-medium leading-snug text-balance sm:text-3xl">
+          {section.text}
+        </p>
+      </div>
+    </section>
+  )
+}

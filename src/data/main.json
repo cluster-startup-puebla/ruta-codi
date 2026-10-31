@@ -1,0 +1,89 @@
+{
+  "title": "Ruta CoDi · Sede Puebla de Hackatón México",
+  "description": "Un mes para construir soluciones de pagos sobre CoDi. Ruta CoDi es la sede Puebla de Hackatón México, del 14 de noviembre al 14 de diciembre de 2026.",
+  "headerCta": {
+    "label": "Apertura",
+    "href": "https://luma.com/jro3jq5m"
+  },
+  "kicker": "Sede Puebla · 14 nov – 14 dic 2026",
+  "headline": "Un mes para construir soluciones de pagos sobre CoDi.",
+  "thanks": {
+    "before": "La iniciativa es de",
+    "name": "Hackatón México",
+    "href": "https://hackatonmexico.com/",
+    "after": "Ruta CoDi es su sede en Puebla, con Kevin Jiménez y el Clúster de Startups e Innovación."
+  },
+  "lede": "Universidades y comunidad construyen productos que usen CoDi. Hay mentoría cada semana y Demo Day al cerrar el mes.",
+  "where": "Puebla · sede por confirmar",
+  "primaryCta": {
+    "label": "Aparta la apertura",
+    "href": "https://luma.com/jro3jq5m"
+  },
+  "secondaryCta": {
+    "label": "Registro nacional",
+    "href": "https://hackatonmexico.com/"
+  },
+  "floats": [
+    { "kicker": "14 nov", "title": "Apertura y ponencias" },
+    { "kicker": "$0", "title": "CoDi no cobra comisión" },
+    { "kicker": "Cursor", "title": "Código para quien asista" },
+    { "kicker": "14 dic", "title": "Demo Day en Puebla" }
+  ],
+  "beats": [
+    {
+      "when": "14 nov",
+      "title": "Apertura",
+      "text": "Ponencias, equipos y códigos de Cursor. Sede por confirmar."
+    },
+    {
+      "when": "Hasta el 12 dic",
+      "title": "Construcción",
+      "text": "El mes de producto, con sesiones de mentoría."
+    },
+    {
+      "when": "14 dic",
+      "title": "Demo Day",
+      "text": "Cierre en Puebla y resultados del hackatón nacional."
+    }
+  ],
+  "organizedBy": {
+    "label": "Organizado por",
+    "logos": [
+      {
+        "name": "Pey",
+        "src": "/logos/pey.svg",
+        "width": 941,
+        "height": 424
+      },
+      {
+        "name": "SpaceXAI",
+        "src": "/logos/spacexai.svg",
+        "width": 1294,
+        "height": 158
+      },
+      {
+        "name": "AI Builders México",
+        "src": "/logos/ai-builders.svg",
+        "width": 393,
+        "height": 95
+      },
+      {
+        "name": "Gobierno de la Ciudad de México, Secretaría de Desarrollo Económico",
+        "src": "/logos/sedeco.png",
+        "width": 750,
+        "height": 142
+      }
+    ]
+  },
+  "sede": {
+    "label": "Sede Puebla",
+    "host": "Kevin Jiménez",
+    "logo": {
+      "name": "Clúster de Startups e Innovación",
+      "src": "/logos/csi.svg",
+      "href": "https://clusterdestartups.org/",
+      "width": 971,
+      "height": 418
+    }
+  }
+}

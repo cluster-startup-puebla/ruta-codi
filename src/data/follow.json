@@ -1,0 +1,135 @@
+{
+  "whyNow": {
+    "enabled": true,
+    "id": "por-que-ahora",
+    "title": "Por qué ahora",
+    "body": "El programa de la sede toma esta ventana: con CoDi dentro de las apps bancarias, alguien tiene que construir los productos que siguen.",
+    "items": [
+      {
+        "figure": "14 dic 2026",
+        "text": "Fecha que el programa marca para que las apps bancarias estandaricen sus transferencias, según las circulares 9/2026 y 10/2026 de Banxico."
+      },
+      {
+        "figure": "3 canales",
+        "text": "CoDi, SPEI y DiMo convergen en las apps de los bancos, con una experiencia más uniforme."
+      },
+      {
+        "figure": "$0",
+        "text": "CoDi no cobra comisión por transferir. Ese margen es el espacio de los productos nuevos."
+      }
+    ]
+  },
+  "month": {
+    "enabled": true,
+    "id": "el-mes",
+    "title": "El mes",
+    "note": "La apertura, el cierre de entregas y el Demo Day ya tienen fecha. Las sesiones son tentativas y se mueven al confirmar la sede. Cada sesión dura tres horas: avance de equipos, mentoría técnica y de negocio, y compromisos de la semana.",
+    "items": [
+      {
+        "when": "14 nov",
+        "title": "Apertura",
+        "text": "Lanzamiento, ponencias, formación de equipos y códigos de Cursor para quien asista.",
+        "place": "Puebla · sede por confirmar",
+        "tentative": false
+      },
+      {
+        "when": "28 nov",
+        "title": "Sesión 1",
+        "text": "Arquitectura y definición del problema. Asesoría técnica.",
+        "place": "Sede por definir",
+        "tentative": true
+      },
+      {
+        "when": "5 dic",
+        "title": "Sesión 2",
+        "text": "Avance del MVP, revisión técnica y checkpoint.",
+        "place": "Sede por definir",
+        "tentative": true
+      },
+      {
+        "when": "10 dic",
+        "title": "Sesión 3",
+        "text": "Modelo de negocio, validación y preparación del pitch.",
+        "place": "Sede por definir",
+        "tentative": true
+      },
+      {
+        "when": "12 dic",
+        "title": "Cierre de entregas",
+        "text": "Último día del hackatón nacional para presentar proyectos y demos.",
+        "place": "Entrega en línea",
+        "tentative": false
+      },
+      {
+        "when": "14 dic",
+        "title": "Demo Day",
+        "text": "Cierre en Puebla y anuncio de resultados de Hackatón México.",
+        "place": "Puebla · sede por confirmar",
+        "tentative": false
+      }
+    ]
+  },
+  "talks": {
+    "enabled": true,
+    "id": "ponencias",
+    "title": "Ponencias de la apertura",
+    "intro": "El 14 de noviembre hay espacio para ponencias. El programa se publica aquí al confirmar cada una.",
+    "empty": "Las ponencias se publican en esta lista en cuanto se confirman.",
+    "items": []
+  },
+  "cursor": {
+    "enabled": true,
+    "id": "cursor",
+    "title": "Códigos de Cursor",
+    "text": "Quien asista a la apertura recibe un código de Cursor."
+  },
+  "prizes": {
+    "enabled": true,
+    "id": "premios",
+    "title": "Premios",
+    "status": "Por confirmar",
+    "text": "Los premios de la sede Puebla se publican en esta sección cuando estén cerrados.",
+    "items": []
+  },
+  "allies": {
+    "enabled": true,
+    "id": "aliados",
+    "title": "Aliados",
+    "intro": "Organizaciones y universidades que se suman a la sede Puebla.",
+    "empty": "Cuando una universidad confirme, su logo se suma aquí.",
+    "items": [
+      {
+        "name": "CONCORA",
+        "href": "https://www.concora.mx/",
+        "logo": "/logos/concora.svg",
+        "width": 821,
+        "height": 367
+      }
+    ]
+  },
+  "join": {
+    "enabled": true,
+    "id": "como-entrar",
+    "title": "Cómo entrar",
+    "items": [
+      {
+        "who": "Apertura en Puebla",
+        "text": "El cupo de la sede pide aprobación del anfitrión. Los códigos de Cursor se entregan a quien asista.",
+        "href": "https://luma.com/jro3jq5m",
+        "label": "Apartar en Luma"
+      },
+      {
+        "who": "Hackatón nacional",
+        "text": "El registro de proyectos, las entregas y los resultados viven en la iniciativa nacional.",
+        "href": "https://hackatonmexico.com/",
+        "label": "Ir a Hackatón México"
+      },
+      {
+        "who": "Universidad o aliado",
+        "text": "Para inscribir un equipo o sumar una sede, escribe al clúster.",
+        "href": "mailto:hola@clusterdestartups.org",
+        "label": "hola@clusterdestartups.org"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+---
+import closed from "../data/closed.json";
+
+const cta =
+  "inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 text-sm font-medium sm:w-auto";
+---
+
+<section id={closed.id} class="border-t border-line px-4 py-16 sm:px-6 sm:py-24">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="max-w-[16ch] font-display text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+      {closed.title}
+    </h2>
+    <p class="mt-4 max-w-[58ch] text-lg leading-relaxed text-mute">{closed.text}</p>
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a href={closed.primaryCta.href} target="_blank" rel="noopener noreferrer" class={`${cta} bg-rose-deep text-white hover:bg-rose-press`}>
+        {closed.primaryCta.label}
+      </a>
+      <a href={closed.secondaryCta.href} target="_blank" rel="noopener noreferrer" class={`${cta} border border-line bg-paper hover:bg-mist`}>
+        {closed.secondaryCta.label}
+      </a>
+    </div>
+    <p class="mt-12 max-w-[58ch] leading-relaxed">
+      {closed.thanks.before}{" "}
+      <a href={closed.thanks.href} target="_blank" rel="noopener noreferrer" class="font-medium text-rose-deep underline decoration-rose/40 underline-offset-4">{closed.thanks.name}</a>{" "}
+      {closed.thanks.after}
+    </p>
+    <p class="mt-4">
+      <a href={closed.contact.href} target="_blank" rel="noopener noreferrer" class="font-medium text-rose-deep">
+        {closed.contact.label}
+      </a>
+    </p>
+  </div>
+</section>

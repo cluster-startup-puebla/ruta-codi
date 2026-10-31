@@ -1,0 +1,42 @@
+---
+import main from "../data/main.json";
+
+const { organizedBy, sede } = main;
+const label = "text-center text-sm font-medium tracking-[0.18em] text-mute uppercase";
+---
+
+<section class="border-t border-line bg-paper px-4 py-14 sm:px-6 sm:py-16" aria-label="Quién organiza">
+  <div class="mx-auto max-w-3xl">
+    <h2 class={label}>{organizedBy.label}</h2>
+    <ul class="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-8 sm:gap-x-10 lg:grid-cols-4">
+      {
+        organizedBy.logos.map((logo) => (
+          <li class="flex h-16 w-full items-center justify-center sm:h-20">
+            <img
+              src={logo.src}
+              alt={logo.name}
+              width={logo.width}
+              height={logo.height}
+              class="max-h-12 w-auto max-w-full object-contain grayscale opacity-70 sm:max-h-14"
+            />
+          </li>
+        ))
+      }
+    </ul>
+    <div class="mt-14 border-t border-line pt-12">
+      <h2 class={label}>{sede.label}</h2>
+      <div class="mx-auto mt-8 grid max-w-sm grid-cols-2 items-center justify-items-center gap-4 sm:max-w-lg sm:gap-12">
+        <a href={sede.logo.href} target="_blank" rel="noopener noreferrer" aria-label={sede.logo.name} class="inline-block py-2">
+          <img
+            src={sede.logo.src}
+            alt=""
+            width={sede.logo.width}
+            height={sede.logo.height}
+            class="h-auto w-[120px] sm:w-[150px]"
+          />
+        </a>
+        <p class="font-display text-lg font-medium sm:text-2xl">{sede.host}</p>
+      </div>
+    </div>
+  </div>
+</section>

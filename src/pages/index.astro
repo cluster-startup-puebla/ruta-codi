@@ -1,0 +1,38 @@
+---
+/*
+THESIS: Ruta CoDi is Puebla's month inside Hackatón México. The page refuses a fintech-product mock and shows the month itself.
+OWN-WORLD: Paper, mist, and rose. Archivo for display, Raleway for text. #E8186A owns the Cursor band. Buttons sit on #A81C70. No blue, no navy.
+STORY: A visitor sees the month, credits Hackatón México, and books the Nov 14 opening. Talks, prizes, and allies update from JSON.
+FIRST VIEWPORT: Centered headline on a rose burst, two actions, then a phone with the month and cards around it.
+FORM: Fintech landing canon from the two references, restaged in the cluster rose. Mobile first. No seed roll; the brief pinned this form.
+*/
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import MainHero from "../components/MainHero.astro";
+import Organizers from "../components/Organizers.astro";
+import WhyNow from "../components/WhyNow.astro";
+import MonthList from "../components/MonthList.astro";
+import Talks from "../components/Talks.astro";
+import CursorBand from "../components/CursorBand.astro";
+import Prizes from "../components/Prizes.astro";
+import Allies from "../components/Allies.astro";
+import JoinPaths from "../components/JoinPaths.astro";
+import ClosedCta from "../components/ClosedCta.astro";
+import main from "../data/main.json";
+---
+
+<Base title={main.title} description={main.description}>
+  <SiteHeader cta={main.headerCta} />
+  <main id="contenido">
+    <MainHero />
+    <Organizers />
+    <Allies />
+    <WhyNow />
+    <MonthList />
+    <Talks />
+    <CursorBand />
+    <Prizes />
+    <JoinPaths />
+    <ClosedCta />
+  </main>
+</Base>

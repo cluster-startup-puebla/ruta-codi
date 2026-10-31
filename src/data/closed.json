@@ -1,0 +1,23 @@
+{
+  "id": "cierre",
+  "title": "La apertura es el 14 de noviembre.",
+  "text": "Aparta tu lugar en la sede Puebla. El registro de proyectos y el cierre de entregas viven en Hackatón México.",
+  "primaryCta": {
+    "label": "Aparta la apertura",
+    "href": "https://luma.com/jro3jq5m"
+  },
+  "secondaryCta": {
+    "label": "Ir a Hackatón México",
+    "href": "https://hackatonmexico.com/"
+  },
+  "thanks": {
+    "before": "Gracias a",
+    "name": "Hackatón México",
+    "href": "https://hackatonmexico.com/",
+    "after": "por abrir la iniciativa. Esta página es su sede en Puebla."
+  },
+  "contact": {
+    "label": "hola@clusterdestartups.org",
+    "href": "mailto:hola@clusterdestartups.org"
+  }
+}
