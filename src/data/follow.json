@@ -33,21 +33,21 @@
         "tentative": false
       },
       {
-        "when": "28 nov",
+        "when": "21 nov",
         "title": "Sesión 1",
         "text": "Arquitectura y definición del problema. Asesoría técnica.",
         "place": "Sede por definir",
         "tentative": true
       },
       {
-        "when": "5 dic",
+        "when": "28 nov",
         "title": "Sesión 2",
         "text": "Avance del MVP, revisión técnica y checkpoint.",
         "place": "Sede por definir",
         "tentative": true
       },
       {
-        "when": "10 dic",
+        "when": "5 dic",
         "title": "Sesión 3",
         "text": "Modelo de negocio, validación y preparación del pitch.",
         "place": "Sede por definir",
@@ -61,7 +61,7 @@
         "tentative": false
       },
       {
-        "when": "14 dic",
+        "when": "12 dic",
         "title": "Demo Day",
         "text": "Cierre en Puebla y anuncio de resultados de Hackatón México.",
         "place": "Puebla · sede por confirmar",
@@ -104,6 +104,13 @@
         "logo": "/logos/concora.svg",
         "width": 821,
         "height": 367
+      },
+      {
+        "name": "Incubadora BUAP",
+        "href": "https://www.buap.mx/content/incubadora-de-empresas",
+        "logo": "/logos/incubadora-buap.png",
+        "width": 631,
+        "height": 215
       }
     ]
   },

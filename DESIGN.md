@@ -76,7 +76,7 @@ Landing de una sola ruta. El primer pantallazo es un campo de rayos en rosa, tit
 
 ## Typography
 
-Archivo para el nombre, los titulares y las fechas. Raleway para el texto. El wordmark del clúster es el SVG de medios, con ancho mínimo de 140px. Una sola línea de entrada, en el hero: «Sede Puebla · 14 nov – 14 dic 2026». Las demás secciones entran directo al título.
+Archivo para el nombre, los titulares y las fechas. Raleway para el texto. El wordmark del clúster es el SVG de medios, con ancho mínimo de 140px. Una sola línea de entrada, en el hero: «Sede Puebla · 14 nov – 12 dic 2026». Las demás secciones entran directo al título.
 
 ## Layout
 

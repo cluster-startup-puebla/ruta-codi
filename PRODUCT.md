@@ -12,7 +12,7 @@ Estudiantes, builders y universidades en Puebla que deciden si entran al mes de 
 
 ## Product Purpose
 
-Contar la visión de Ruta CoDi y llevar a la apertura presencial. Ruta CoDi es la sede Puebla de Hackatón México: un mes, del 14 de noviembre al 14 de diciembre de 2026, para construir productos fintech que usen CoDi.
+Contar la visión de Ruta CoDi y llevar a la apertura presencial. Ruta CoDi es la sede Puebla de Hackatón México: un mes, del 14 de noviembre al 12 de diciembre de 2026, para construir productos fintech que usen CoDi.
 
 ## Positioning
 
@@ -26,7 +26,7 @@ La sede aún confirma lugar, ponencias y premios. Esos datos se editan en `src/d
 
 - Landing estática. Sin formulario propio.
 - La sede de la apertura y de las sesiones está por confirmar. No se publica Workósfera ni DGIEN hasta que se cierre.
-- Las sesiones del 28 nov, 5 dic y 10 dic son tentativas.
+- Las sesiones del 21 nov, 28 nov y 5 dic son tentativas. La apertura es el 14 nov y el Demo Day el 12 dic; ambos caen en sábado.
 - Premios de la sede: por confirmar. No se inventan montos.
 - Ponencias: lista vacía hasta que se confirmen. Cada entrada usa `title`, `speaker` y `org`.
 - Aliados: CONCORA ya está. Una universidad nueva es un objeto en `follow.allies.items` con `name`, `href`, `logo`, `width` y `height`.
