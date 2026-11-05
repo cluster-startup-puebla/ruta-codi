@@ -1,0 +1,71 @@
+---
+import type { DayMark } from "../lib/program-calendar";
+
+interface Props {
+  name: string;
+  monthIndex: number;
+  weeks: (number | null)[][];
+  marks: Map<string, DayMark>;
+}
+
+const { name, monthIndex, weeks, marks } = Astro.props;
+const weekdays = [
+  ["lunes", "L"],
+  ["martes", "M"],
+  ["miércoles", "M"],
+  ["jueves", "J"],
+  ["viernes", "V"],
+  ["sábado", "S"],
+  ["domingo", "D"],
+] as const;
+const headingId = `cal-${monthIndex}`;
+---
+
+<article class="rounded-2xl border border-line bg-paper p-3 sm:p-4">
+  <h3 id={headingId} class="font-display text-lg font-semibold">{name}</h3>
+  <table aria-labelledby={headingId} class="mt-3 w-full border-separate border-spacing-x-1 border-spacing-y-1">
+    <thead>
+      <tr>
+        {
+          weekdays.map(([full, short]) => (
+            <th scope="col" class="pb-1 text-center text-xs font-medium text-mute">
+              <abbr title={full} class="no-underline">{short}</abbr>
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        weeks.map((week) => (
+          <tr>
+            {week.map((day) => {
+              const mark = day == null ? undefined : marks.get(`${monthIndex}-${day}`);
+              return (
+                <td class="w-[14.28%] p-0 text-center align-top">
+                  {day != null && (
+                    <div
+                      class:list={[
+                        "flex min-h-11 flex-col items-center justify-start gap-0.5 rounded-xl px-0.5 py-1",
+                        mark && !mark.tentative && "bg-rose-deep text-white",
+                        mark?.tentative && "bg-rose-soft text-rose-deep",
+                      ]}
+                    >
+                      <span class:list={["text-sm leading-none font-semibold", !mark && "text-ink"]}>
+                        {day}
+                      </span>
+                      {mark?.titles.map((title) => (
+                        <span class="block text-[10px] leading-tight font-medium">{title}</span>
+                      ))}
+                      {mark?.tentative && <span class="sr-only">Fecha tentativa</span>}
+                    </div>
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</article>

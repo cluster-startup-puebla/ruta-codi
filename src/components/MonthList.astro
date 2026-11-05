@@ -1,7 +1,10 @@
 ---
 import follow from "../data/follow.json";
+import MonthGrid from "./MonthGrid.astro";
+import { MONTHS, PROGRAM_YEAR, marksFor, monthWeeks } from "../lib/program-calendar";
 
 const section = follow.month;
+const marks = marksFor(section.items);
 ---
 
 {
@@ -10,19 +13,43 @@ const section = follow.month;
       <div class="mx-auto max-w-6xl">
         <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">{section.title}</h2>
         <p class="mt-4 max-w-[68ch] text-lg leading-relaxed text-mute">{section.note}</p>
+        <div class="mt-10 grid gap-4 lg:grid-cols-2">
+          {
+            MONTHS.map((month) => (
+              <MonthGrid
+                name={`${month.name} ${PROGRAM_YEAR}`}
+                monthIndex={month.index}
+                weeks={monthWeeks(PROGRAM_YEAR, month.index)}
+                marks={marks}
+              />
+            ))
+          }
+        </div>
+        <ul class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-mute">
+          <li class="flex items-center gap-2">
+            <span class="size-3 rounded bg-rose-deep" aria-hidden="true" />
+            Fecha fija
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="size-3 rounded bg-rose-soft ring-1 ring-rose-deep" aria-hidden="true" />
+            Fecha tentativa
+          </li>
+        </ul>
         <ol class="mt-10 border-l border-line pl-5">
-          {section.items.map((item) => (
-            <li class="relative pb-7 last:pb-0">
-              <span class="absolute top-1.5 -left-[1.45rem] size-2.5 rounded-full bg-rose" aria-hidden="true" />
-              <p class="font-display text-lg font-semibold">
-                {item.when}
-                <span class="font-medium"> · {item.title}</span>
-              </p>
-              {item.tentative && <p class="mt-1 text-sm font-medium text-rose-deep">Fecha tentativa</p>}
-              <p class="mt-1 max-w-[62ch] leading-relaxed">{item.text}</p>
-              <p class="mt-1 text-sm text-mute">{item.place}</p>
-            </li>
-          ))}
+          {
+            section.items.map((item) => (
+              <li class="relative pb-7 last:pb-0">
+                <span class="absolute top-1.5 -left-[1.45rem] size-2.5 rounded-full bg-rose" aria-hidden="true" />
+                <p class="font-display text-lg font-semibold">
+                  {item.when}
+                  <span class="font-medium"> · {item.title}</span>
+                </p>
+                {item.tentative && <p class="mt-1 text-sm font-medium text-rose-deep">Fecha tentativa</p>}
+                <p class="mt-1 max-w-[62ch] leading-relaxed">{item.text}</p>
+                <p class="mt-1 text-sm text-mute">{item.place}</p>
+              </li>
+            ))
+          }
         </ol>
       </div>
     </section>
